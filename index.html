@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixed Messages</title>
+    
+    <script>
+        
+const first = ['You','Your mind','Your family', 'Your brother']
+const second = ['must be','should be','is','might be']
+const third = ['tired','hungry','sleepy','anoyed','jealous']
+function generate(){
+let final = '';
+final =first[Math.floor(Math.random() * 4)] + ' '  ;
+final += second[Math.floor(Math.random() * 4)] + ' ';
+final += third[Math.floor(Math.random() * 5)];
+console.log(final);
+document.getElementById('message').innerText = final;
+}
+        /*
+        var phrase = document.getElementById('btn1');
+
+let pageId = 'https://www.wow4u.com/ability2/index.html'
+async function generate(){
+    
+    let url = 'https://www.wow4u.com/ability2/';
+    let obj = await (await fetch(url)).text();
+    console.log(obj);
+
+    
+  fetch('https://www.wow4u.com/ability2.json')
+    .then(res => { res.json()
+    .then(data => {
+    console.log(data)
+});
+  });
+  
+} */
+    </script> 
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    #main {
+        position: relative;
+        height: 800px;
+        border-style: dashed;
+        border-radius: 2px;
+        border-color:sienna;
+        background-color: thistle;
+
+    }
+    h1 {
+        position: relative;
+       font-family: Arial, Helvetica, sans-serif;
+       font-size: 5em;
+       text-align: center;
+       color: black; 
+    }
+    #message {
+        position: relative;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2.5em;
+        color:darkred;
+        text-align: center;
+        border-style: solid;
+        border-width: 4px;
+        background-color:floralwhite ;
+        border-left-color:gray  ;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color:gray ;
+        margin-top: 200px;
+    }
+    #btn1 {
+        font-size: 1.5em;
+        position: relative;
+        text-align: center;
+        font-family: fantasy;
+    }
+    #press{
+        position:absolute;
+        top: 600px;
+        left: 47%;
+    }
+</style>
+<body>
+    <div id='main'>
+    <h1>Mixed Messages</h1>
+    <br><br>
+    <h2 id='message'> This is  a message my browski</h2>
+
+    <div id='press'><button id='btn1' type="button" onclick="generate()">New Phrase</button></div>
+</div>
+</body>
+</html>
